@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>ビューポートあり</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            font-size: 16px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            max-width: 800px; /* PC向けに広めの幅 */
+            line-height: 1.6;
+        }
+
+        /* モバイル向けスタイル（ビューポート設定があれば正しく適用される） */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightgreen; /* スマホで見ると緑色になるはず */
+                font-size: 14px;
+            }
+            p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ビューポート設定ありのページ</h1>
+    <p>このページにはビューポートのメタタグが適切に設定されています。スマートフォンで開いた場合、デバイスの幅に合わせて表示され、モバイル向けCSS（背景が緑色になるスタイル）が正しく適用されるはずです。</p>
+    <p>テキストのサイズも適切に表示され、ズームすることなく読みやすいでしょう。</p>
+</body>
+</html>

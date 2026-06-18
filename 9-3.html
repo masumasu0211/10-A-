@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>メディアクエリ練習</title>
+    <link rel="stylesheet" href="9-3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>メディアクエリで色が変わるデモ</h1>
+        <p>ブラウザのウィンドウ幅を変更してみてください。</p>
+        <div id="width-display">現在の画面幅: <span id="current-width"></span>px</div>
+    </div>
+
+    <script>
+        // JavaScriptで現在の画面幅をリアルタイムで表示する機能
+        function displayWindowWidth() {
+            const currentWidthSpan = document.getElementById('current-width');
+            if (currentWidthSpan) {
+                currentWidthSpan.textContent = window.innerWidth;
+            }
+        }
+
+        // ページ読み込み時とウィンドウサイズ変更時に幅を表示
+        window.onload = displayWindowWidth;
+        window.onresize = displayWindowWidth;
+    </script>
+</body>
+</html>
